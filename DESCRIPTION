@@ -1,0 +1,16 @@
+Package: enrichedRanges
+Title: Identify if a set of regions are enriched or not
+Version: 0.0.1
+Authors@R: c(person("Leonardo", "Collado-Torres", role = c("aut", "cre"), email
+    = "lcollado@jhu.edu"), person("Andrew", "Jaffe", role = c("aut", "ths"),
+    email = "andrew.jaffe@libd.org"))
+Description: Identify if a set of regions are enriched or not
+Depends:
+    R (>= 3.1.0)
+License: Artistic-2.0
+LazyData: true
+Imports:
+    GenomicRanges
+Suggests:
+    seqbias,
+    biovizBase
