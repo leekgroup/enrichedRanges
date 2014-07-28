@@ -13,7 +13,7 @@ install.packages("devtools")
 
 ## Pre-requisites from Bioconductor
 source("http://bioconductor.org/biocLite.R")
-biocLite(c("biovizBase", "GenomicRanges"))
+biocLite(c("biovizBase", "GenomicRanges", "seqbias"))
     
 ## enrichedRanges
 library("devtools")
