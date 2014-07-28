@@ -31,9 +31,7 @@ __enrichedRanges__.
 
 To cite package __enrichedRanges__ in publications use:
 
-Leonardo Collado-Torres, Alyssa Frazee, Andrew Jaffe and Jeffrey Leek (2014). 
-derfinder: Fast differential expression analysis of RNA-seq data at base-pair 
-resolution. R package version 0.0.65. https://github.com/lcolladotor/derfinder
+Leonardo Collado-Torres and Andrew Jaffe (2014). enrichedRanges: Identify if a set of regions are enriched or not. R package version 0.0.1.
 
 A BibTeX entry for LaTeX users is
 

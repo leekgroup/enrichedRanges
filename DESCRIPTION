@@ -1,6 +1,7 @@
 Package: enrichedRanges
 Title: Identify if a set of regions are enriched or not
 Version: 0.0.1
+Date: 2014-07-28
 Authors@R: c(person("Leonardo", "Collado-Torres", role = c("aut", "cre"), email
     = "lcollado@jhu.edu"), person("Andrew", "Jaffe", role = c("aut", "ths"),
     email = "andrew.jaffe@libd.org"))
