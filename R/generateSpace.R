@@ -40,6 +40,6 @@ generateSpace <- function(I, gr, nPermute = 1000,
         set.seed(seed)
     }
     space <- randomInterval(I, n = n * nPermute, ms = ms, strand.specific = strand.specific, randomize.strand = randomize.strand)
-    values(space)$permutation <- rep(seq_len(nPermute), n)
+    values(space)$permutation <- rep(seq_len(nPermute), each=length(gr))
     return(space)
 }
