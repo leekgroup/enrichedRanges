@@ -9,7 +9,7 @@ randomInterval(I, n = 1, ms = 10000, strand.specific = FALSE,
 \arguments{
 \item{I}{A GRanges object giving intervals from which to sample from.}
 
-\item{n}{Number of intervals to generate}
+\item{n}{Number of intervals to generate.}
 
 \item{ms}{Length of intervals to generate. It can be a vector but
 recycling rules will be used if \code{ms} is of a length smaller than

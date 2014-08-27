@@ -1,7 +1,7 @@
 enrichedRanges
 ==============
 
-Working project on finding whether a set of regions are enriched or not.
+Identify enrichment between two sets of genomic ranges.
 
 # Installation instructions
 
@@ -31,12 +31,14 @@ __enrichedRanges__.
 
 To cite package __enrichedRanges__ in publications use:
 
-Leonardo Collado-Torres and Andrew Jaffe (2014). enrichedRanges: Identify enrichment between two sets of genomic ranges. R package version 0.0.1.
+Leonardo Collado-Torres and Andrew Jaffe (2014). enrichedRanges: Identify enrichment between two sets of genomic ranges. R package version 0.0.2.
 
 A BibTeX entry for LaTeX users is
 
+```
 @Manual{,
     title = {enrichedRanges: Identify enrichment between two sets of genomic ranges},
     author = {Leonardo Collado-Torres and Andrew Jaffe},
-    note = {R package version 0.0.1},
+    note = {R package version 0.0.2},
 }
+```

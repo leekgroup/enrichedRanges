@@ -4,7 +4,7 @@
 #' random from those regions. These can be strand specific or not.
 #'
 #' @param I A GRanges object giving intervals from which to sample from.
-#' @param n Number of intervals to generate
+#' @param n Number of intervals to generate.
 #' @param ms Length of intervals to generate. It can be a vector but 
 #' recycling rules will be used if \code{ms} is of a length smaller than 
 #' \code{n}.

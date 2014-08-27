@@ -3,17 +3,16 @@
 \alias{generateSpace}
 \title{Obtain the null distribution of a set of intervals}
 \usage{
-generateSpace(I, nPermute = 1000, n = 1, ms = 10000,
-  strand.specific = FALSE, randomize.strand = FALSE, seed = NULL)
+generateSpace(I, gr, nPermute = 1000, strand.specific = FALSE,
+  randomize.strand = FALSE, seed = NULL)
 }
 \arguments{
 \item{I}{A GRanges object giving intervals from which to sample from.}
 
+\item{gr}{A GRanges object giving intervals of interest to resample from
+\code{I}.}
+
 \item{nPermute}{Number of permutations to run.}
-
-\item{n}{Number of intervals to generate.}
-
-\item{ms}{Length of intervals to generate.}
 
 \item{strand.specific}{Whether the random intervals should have be strand
 specific or not.}
@@ -30,7 +29,12 @@ permutations which will be used to determine the null distribution.
 \examples{
 ## Create some input ranges
 library('GenomicRanges')
-gr <- GRanges(c('chr1', 'chrX'), IRanges(c(1e6, 3e6), width = 1e5), strand =
+I <- GRanges(c('chr1', 'chrX'), IRanges(c(1e6, 3e6), width = 1e5), strand =
+    c('+', '-'))
+I
+
+## Intervals of interest to resample from
+gr <- GRanges(c('chr1', 'chrX'), IRanges(c(1e6, 3e6), width = 1e3), strand =
     c('+', '-'))
 gr
 
@@ -38,7 +42,7 @@ gr
 set.seed(20140728)
 
 ## Obtain space of random intervals
-space <- generateSpace(gr, nPermute = 1000, n = 2, ms = c(1234, 4321))
+space <- generateSpace(I, gr, nPermute = 1000)
 space
 }
 \author{

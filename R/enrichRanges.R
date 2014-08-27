@@ -24,18 +24,18 @@
 #' @examples
 #' ## Create some input ranges
 #' library('GenomicRanges')
-#' gr <- GRanges(c('chr1', 'chrX'), IRanges(c(1e6, 3e6), width = 1e5), strand = 
+#' I <- GRanges(c('chr1', 'chrX'), IRanges(c(1e6, 3e6), width = 1e5), strand = 
 #'     c('+', '-'))
 #' 
+#' ## Intervals of interest to resample from
+#' gr <- GRanges(c('chr1', 'chrX'), IRanges(c(1e6, 3e6), width = 1e3), strand = 
+#'     c('+', '-'))
+#'
 #' ## Set the seed if you want to reproduce the random results
 #' set.seed(20140728)
-#' ## Build query
-#' query <- GRanges(c('chr1', 'chrX'), IRanges(c(1e6, 3e6), width = c(1234, 
-#'     4321)), strand = c('+', '-'))
 #' 
 #' ## Obtain 4 random intervals
-#' space <- generateSpace(gr, nPermute = 1000, n = length(query),
-#'     ms = width(query))
+#' space <- generateSpace(I, gr, nPermute = 1000)
 #'
 #' ## Get chr lengths
 #' data(hg19Ideogram, package = 'biovizBase', envir = environment())
@@ -47,6 +47,10 @@
 #' ## Create the tiles
 #' tiles <- createTiles(seqlengths, gaps, binSize = c(1e3, 1e4))
 #' 
+#' ## Build query
+#' query <- GRanges(c('chr1', 'chrX'), IRanges(c(1e6, 3e6), width = c(1234, 
+#'     4321)), strand = c('+', '-'))
+#'
 #' ## Get the results
 #' enrich <- enrichRanges(query, space, tiles)
 #'
