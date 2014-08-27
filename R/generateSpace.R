@@ -4,9 +4,8 @@
 #' permutations which will be used to determine the null distribution.
 #'
 #' @param I A GRanges object giving intervals from which to sample from.
+#' @param gr A GRanges object giving intervals of interest to resample from I
 #' @param nPermute Number of permutations to run.
-#' @param n Number of intervals to generate.
-#' @param ms Length of intervals to generate.
 #' @param strand.specific Whether the random intervals should have be strand
 #' specific or not.
 #' @param randomize.strand When \code{strand.specific=TRUE}, whether the strand
@@ -32,14 +31,15 @@
 #' space <- generateSpace(gr, nPermute = 1000, n = 2, ms = c(1234, 4321))
 #' space
 
-generateSpace <- function(I, nPermute = 1000, n = 1, ms = 1e4, 
+generateSpace <- function(I, gr, nPermute = 1000, 
     strand.specific = FALSE, randomize.strand = FALSE, seed = NULL) {
     stopifnot(is(I, "GRanges"))
-    
+    n = length(gr)
+    ms = width(gr)
     if(!is.null(seed)) {
         set.seed(seed)
     }
     space <- randomInterval(I, n = n * nPermute, ms = ms, strand.specific = strand.specific, randomize.strand = randomize.strand)
-    values(space)$permutation <- rep(seq_len(nPermute), n)
+    values(space)$permutation <- rep(seq_len(nPermute), each=length(gr))
     return(space)
 }
