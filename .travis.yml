@@ -20,8 +20,10 @@ notifications:
   email:
     on_success: change
     on_failure: change
+  slack:
+    secure: e1atKdlUJfaP8iL09yPiTi8N9tt/kX7wGk9VvSppTn2sh9mB2uD9PkXh/qBR8EYXIyaKTftzhnOTocey94bRDPZKeFUlGxo609GNwYxY7RC9a1SKs4heC13QEolq1x0YmW/0sr+PdjmQCNrIBLpvLgOStMGP1wKeurlb6aHea7M=
 
 env:
   global:
-    - R_CHECK_ARGS="--no-build-vignettes --no-manual --timings" 
-    - R_CHECK_TIME="TRUE"
+  - R_CHECK_ARGS="--no-build-vignettes --no-manual --timings"
+  - R_CHECK_TIME="TRUE"
