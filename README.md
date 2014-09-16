@@ -1,4 +1,4 @@
-enrichedRanges
+enrichedRanges [![Build Status](https://travis-ci.org/lcolladotor/enrichedRanges.svg?branch=master)](https://travis-ci.org/lcolladotor/enrichedRanges)
 ==============
 
 Identify enrichment between two sets of genomic ranges.
@@ -41,4 +41,18 @@ A BibTeX entry for LaTeX users is
     author = {Leonardo Collado-Torres and Andrew Jaffe},
     note = {R package version 0.0.2},
 }
+```
+
+## Travis CI
+
+This package is automatically tested thanks to [Travis CI](travis-ci.org) and [r-travis](https://github.com/craigcitro/r-travis). If you want to add this to your own package use:
+
+```R
+## Use devtools to create the .travis.yml file
+library('devtools')
+use_travis('yourPackage')
+
+## Read https://github.com/craigcitro/r-travis/wiki to configure .travis.yml appropriately
+
+## Add a status image by following the info at http://docs.travis-ci.com/user/status-images/
 ```
