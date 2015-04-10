@@ -1,4 +1,4 @@
-enrichedRanges [![Build Status](https://travis-ci.org/lcolladotor/enrichedRanges.svg?branch=master)](https://travis-ci.org/lcolladotor/enrichedRanges)
+enrichedRanges [![Build Status](https://travis-ci.org/leekgroup/enrichedRanges.svg?branch=master)](https://travis-ci.org/leekgroup/enrichedRanges)
 ==============
 
 Identify enrichment between two sets of genomic ranges.
@@ -17,7 +17,7 @@ biocLite(c("biovizBase", "GenomicRanges", "seqbias"))
     
 ## enrichedRanges
 library("devtools")
-install_github("lcolladotor/enrichedRanges")
+install_github("leekgroup/enrichedRanges")
 ```
 
 
