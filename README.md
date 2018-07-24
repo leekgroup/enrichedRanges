@@ -12,8 +12,8 @@ Get R 3.1 or newer from [CRAN](http://cran.r-project.org/).
 install.packages("devtools")
 
 ## Pre-requisites from Bioconductor
-source("http://bioconductor.org/biocLite.R")
-biocLite(c("biovizBase", "GenomicRanges", "seqbias"))
+install.packages("BiocManager")
+BiocManager::install(c("biovizBase", "GenomicRanges", "seqbias"))
     
 ## enrichedRanges
 library("devtools")
